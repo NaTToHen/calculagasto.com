@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@font-face {
+   font-family: MinhaFonte;
+   src: url('../img/font/Mada-Font/Mada-Medium.ttf') format('truetype');
+ }
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: MinhaFonte, sans-serif;
+}
+
+html {
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+}
+
+header {
+   z-index: 5;
+   position: fixed;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 12vh;
+   width: 100%;
+   transition: all ease-in-out .2s;
+}
+
+.navLista {
+   display: flex;
+   justify-content: space-between;
+}
+
+.navLista li {
+   list-style: none;
+   margin-right: 35px;
+}
+
+.navLista li:last-child {
+   margin-right: 0;
+}
+
+.navLista .linkNav a {
+   font-weight: 900;
+   text-decoration: none;
+   font-size: 20px;
+   color: white;
+}
+
+.getApp {
+   font-weight: 900;
+   list-style: none;
+   text-decoration: none;
+   font-size: 20px;
+   padding: 10px 20px;
+   background-color: white;
+   color: #00A106;
+   border-radius: 15px;
+   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+#topoHeader {
+   width: 100%;
+   height: 80vh;
+   background-image: url(/img/fundos.svg);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.fundoBaixo {
+   width: 100%;
+   height: 3vh;
+   background-image: url(/img/fundobaixo.svg);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+#topo {
+   margin: auto;
+   display: flex;
+   position: relative;
+   width: 80%;
+   height: 80vh;
+}
+
+#topo .esquerda {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   position: relative;
+   width: 60%;
+}
+
+#topo .direita {
+   width: 40%;
+   background-color: aquamarine;
+}
+
+.h1Topo {
+   color: white;
+   font-size: 60px;
+   top: 30vh;
+   width: 70%;
+   margin-left: 8%;
+   margin-top: 30%;
+}
+
+.btnGetApp {
+   display: flex;
+   background: white;
+   align-items: center;
+   margin-left: 8%;
+   margin-top: 20px;
+   padding: 5px 15px;
+   border-radius: 15px;
+   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+.btnGetApp a {
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 20px;
+   margin-left: 5px;
+   color: #31DB37;
+}
+
+::-webkit-scrollbar {
+   width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: #001a37;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: #0051ad;
+   cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #003b7d;
+}
