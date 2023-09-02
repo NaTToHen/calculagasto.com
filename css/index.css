@@ -18,14 +18,24 @@ html {
 }
 
 header {
-   z-index: 5;
+   z-index: 90;
    position: fixed;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
+   padding: 0 10% 0 10%;
    align-items: center;
    height: 12vh;
    width: 100%;
    transition: all ease-in-out .2s;
+}
+
+header img {
+   cursor: pointer;
+   transition: all ease-in-out .2s;
+}
+
+header img:hover {
+   transform: scale(1.05);
 }
 
 .navLista {
@@ -69,8 +79,14 @@ header {
    background-size: cover;
 }
 
+.fundoHeader {
+   background: var(--linear-padro, linear-gradient(107deg, #44FF4B 0%, #008205 92.04%));
+   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
 .fundoBaixo {
    width: 100%;
+   z-index: 10;
    height: 3vh;
    background-image: url(/img/fundobaixo.svg);
    background-repeat: no-repeat;
@@ -95,7 +111,6 @@ header {
 
 #topo .direita {
    width: 40%;
-   background-color: aquamarine;
 }
 
 .h1Topo {
@@ -113,17 +128,173 @@ header {
    align-items: center;
    margin-left: 8%;
    margin-top: 20px;
-   padding: 5px 15px;
+   padding: 8px 15px;
    border-radius: 15px;
    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+   transition: all ease-in-out .2s;
+}
+
+.btnGetApp:hover {
+   transform: scale(1.05);
 }
 
 .btnGetApp a {
    text-decoration: none;
    font-weight: bold;
-   font-size: 20px;
+   font-size: 25px;
    margin-left: 5px;
    color: #31DB37;
+}
+
+.celularesTopo {
+   margin-top: 26.5vh;
+   z-index: 0;
+}
+
+/*FUNCIONALIDADES*/
+
+#funcionalidades {
+   margin: auto;
+   margin-top: 6vh;
+   display: flex;
+   position: relative;
+   width: 80%;
+   height: 70vh;
+}
+
+#funcionalidades .esquerda {
+   display: flex;
+   align-items: center;
+   position: relative;
+   width: 50%;
+}
+
+#funcionalidades .esquerda img {
+   position: absolute;
+   margin-left: 40px;
+   bottom: 0px;
+   z-index: 10;
+}
+
+#funcionalidades .direita {
+   display: flex;
+   width: 50%;
+   align-items: center;
+}
+
+#funcionalidades .h1Func {
+   font-size: 64px;
+   color: #31DB37;
+   text-align: center;
+}
+
+/*ICONES*/
+
+#icones {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   height: 40vh;
+   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.16);
+   margin-bottom: 30px;
+   z-index: 11;
+}
+
+#icones .elemento {
+   display: flex;
+   align-items: center;
+}
+
+#icones .elemento h1 {
+   margin-left: 20px;
+   width: 200px;
+   color: #717171;
+   font-size: 30px;
+}
+
+/*DEV*/
+
+#dev {
+   height: 50vh;
+   display: flex;
+   width: 80%;
+   margin: auto;
+   align-items: center;
+   justify-content: center;
+}
+
+#dev h1 {
+   color: #31DB37;
+   text-align: center;
+   font-size: 64px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+}
+
+#dev h2 {
+   color: #717171;
+   text-align: center;
+   font-size: 48px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+}
+
+#dev .icones {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 30px;
+}
+
+#dev .icones img {
+   transition: all ease-in-out .2s;
+   cursor: pointer;
+}
+
+#dev .icones img:hover {
+   transform: scale(1.05);
+}
+
+#dev .icones img:first-child {
+   margin-right: 40px;
+}
+
+footer {
+   background: var(--linear-padro, linear-gradient(107deg, #44FF4B 0%, #008205 92.04%));
+   height: 25vh;
+   width: 100%;
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+footer .textos h1 {
+   font-size: 48px;
+   font-style: normal;
+   font-weight: 700;
+   margin-bottom: 10px;
+}
+
+footer .textos h2 {
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 500;
+}
+
+footer .links li {
+   margin-top: 10px;
+   list-style: none;
+}
+
+footer .links li a {
+   display: flex;
+   align-items: center;
+   font-size: 20px;
+   text-decoration: none;
+   color: white;
 }
 
 ::-webkit-scrollbar {
@@ -132,15 +303,15 @@ header {
 
 /* Track */
 ::-webkit-scrollbar-track {
-   background: #001a37;
+   background: #ffffff;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-   background: #0051ad;
+   background: #00A106;
    cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-   background: #003b7d;
+   background: #31DB37;
 }
