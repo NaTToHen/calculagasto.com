@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@font-face {
+   font-family: MinhaFonte;
+   src: url('../img/font/Mada-Font/Mada-Medium.ttf') format('truetype');
+ }
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: MinhaFonte, sans-serif;
+}
+
+html {
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+}
+
+body {
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   text-rendering: optimizeLegibility;
+   font-feature-settings: "cv11", "salt", "ss01", "ss03", "cv01", "cv02", "cv03", "cv04", "cv05", "cv06", "cv09", "cv10";
+}
+
+header {
+   z-index: 90;
+   position: absolute;
+   top: 0;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 10% 0 10%;
+   align-items: center;
+   height: 12vh;
+   width: 100%;
+   transition: all ease-in-out .2s;
+   background: var(--linear-padro, linear-gradient(107deg, #44FF4B 0%, #008205 92.04%));
+   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+header img {
+   cursor: pointer;
+   transition: all ease-in-out .2s;
+}
+
+header img:hover {
+   transform: scale(1.05);
+}
+
+.navLista {
+   display: flex;
+   justify-content: space-between;
+}
+
+.navLista li {
+   list-style: none;
+   margin-right: 35px;
+}
+
+.navLista li:last-child {
+   margin-right: 0;
+}
+
+.navLista .linkNav a {
+   font-weight: 900;
+   text-decoration: none;
+   font-size: 20px;
+   color: white;
+}
+
+.getApp {
+   font-weight: 900;
+   list-style: none;
+   text-decoration: none;
+   font-size: 20px;
+   padding: 10px 20px;
+   background-color: white;
+   color: #00A106;
+   border-radius: 15px;
+   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+#termos {
+   margin-top: 20vh;
+}
+
+main {
+   width: 80%;
+   font-size: 20px;
+   margin: auto;
+   margin-bottom: 100px;
+}
+
+.titulo {
+   color: #666666;
+}
+
+.normal {
+   margin-left: 2%;
+   color: #A9A9A9;
+}
+
+footer {
+   background: var(--linear-padro, linear-gradient(107deg, #44FF4B 0%, #008205 92.04%));
+   height: 25vh;
+   width: 100%;
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+footer .textos h1 {
+   font-size: 48px;
+   font-style: normal;
+   font-weight: 700;
+   margin-bottom: 10px;
+}
+
+footer .textos h2 {
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 500;
+}
+
+footer .links li {
+   margin-top: 10px;
+   list-style: none;
+}
+
+footer .links li a {
+   display: flex;
+   align-items: center;
+   font-size: 20px;
+   text-decoration: none;
+   color: white;
+}
+
+::-webkit-scrollbar {
+   width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: #00A106;
+   cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #31DB37;
+}
