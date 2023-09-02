@@ -31,7 +31,7 @@ header {
    justify-content: space-between;
    padding: 0 10% 0 10%;
    align-items: center;
-   height: 12vh;
+   height: 10vh;
    width: 100%;
    transition: all ease-in-out .2s;
 }
@@ -51,7 +51,11 @@ header img:hover {
 }
 
 .navLista li {
+   border-radius: 10px 10px 0 0;
+   transition: all ease-in-out .2s;
+   position: relative;
    list-style: none;
+   padding: 10px;
    margin-right: 35px;
 }
 
@@ -76,6 +80,27 @@ header img:hover {
    color: #00A106;
    border-radius: 15px;
    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+.dropDown {
+   transition: all ease-in-out .2s;
+   display: none;
+   z-index: 100;
+   background: #005e03;
+   text-align: center;
+   position: absolute;
+   width: 150px;
+   border-radius: 0 10px 10px;
+   margin-top: 8px;
+   margin-left: -10px;
+}
+
+.sobre:hover {
+   background: #005e03;
+   .dropDown {
+      transition: all ease-in-out .2s;
+      display: block;
+   }
 }
 
 #topoHeader {
