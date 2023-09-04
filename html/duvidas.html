@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/sobre.css">
+   <link rel="shortcut icon" href="../img/logoico.ico" type="image/x-icon">
+   <title>CalculaGasto - Duvidas</title>
+</head>
+
+<body>
+   <div w3-include-html="../html/header.html"></div>
+
+   <div id="termos">
+      <div class="boxConteudo">
+         <div class="label">Quero excluir a minha conta e apagar os meus dados</div>
+         <div class="conteudo">
+            <p class="texto">
+               Para excluir a sua conta e apagar todos os seus dados envie um email para o email: <b class="email">contato@calculagasto.com</b>,
+               com o assunto “apagar conta [email da sua conta]”, a conta será deletada em até 5 dias.
+               Em breve este processo será feito pelo App.*
+            </p>
+         </div>
+      </div>
+      <div class="boxConteudo">
+         <div class="label">Como recuperar a minha senha?</div>
+         <div class="conteudo">
+            <p class="texto">
+               essa funcionalidade sera implementada em breve no App. Caso esteja com problemas para lembrar a 
+               sua senha, ou estiver com algum erro entre em contato em: <b>contato@calculagasto.com</b>.
+            </p>
+         </div>
+      </div>
+      <div class="boxConteudo">
+         <div class="label">Quando o App vai sair do beta?</div>
+         <div class="conteudo">
+            <p class="texto">
+               Até o final de 2023.
+            </p>
+         </div>
+      </div>
+      <div class="boxConteudo">
+         <div class="label">É possível remover os anúncios?</div>
+         <div class="conteudo">
+            <p class="texto">
+               Não é possível. O App utiliza anúncios para  captar dinheiro e garantir o seu funcionamento.
+            </p>
+         </div>
+      </div>
+   </div>
+
+   <script src="../js/index.js"></script>
+   <script>
+      function addHTML() {
+         var el, i, domEl, fileName, xmlHttp;
+         
+         /*Iterate all DOM*/
+         el = document.getElementsByTagName("*");
+         for (i = 0; i < el.length; i++) {
+            domEl = el[i];
+            
+            /*find the element having w3-include-html attribute*/
+            fileName = domEl.getAttribute("w3-include-html");
+            if (fileName) {
+               
+               /*http request with attribute value as file name*/
+               xmlHttp = new XMLHttpRequest();
+               xmlHttp.onreadystatechange = function() {
+                  if (this.readyState == 4) {
+                     if (this.status == 200) {
+                        domEl.innerHTML = this.responseText;
+                     }
+                     if (this.status == 404) {
+                        domEl.innerHTML = "Page not found.";
+                     }
+                     
+                     /* Remove the attribute and invoke the function again*/
+                     domEl.removeAttribute("w3-include-html");
+                     addHTML();
+                  }
+               }
+               xmlHttp.open("GET", fileName, true);
+               xmlHttp.send();
+               
+               /*function ends*/
+               return;
+            }
+         }
+      }
+      addHTML();
+   </script>
+</body>
+
+</html>

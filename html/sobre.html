@@ -10,24 +10,8 @@
 </head>
 
 <body>
-   <div id="topoHeader">
-      <header id="menu">
-         <div class="logo">
-            <a href="../index.html"><img src="../img/logo.svg" alt=""></a>
-         </div>
-         <nav class="nav">
-            <ul class="navLista">
-               <li class="linkNav"><a href="../index.html">Home</a></li>
-               <li class="linkNav sobre"><a href="#funcionalidades">Sobre</a>
-                  <ul class="dropDown">
-                     <li><a href="../html/sobre.html" class="dropLink">Termos de Uso</a></li>
-                   </ul>
-               </li>
-               <li class=""><a href="" class="getApp">Download</a></li>
-            </ul>
-         </nav>
-      </header>
-   </div>
+
+   <div w3-include-html="../html/header.html"></div>
 
    <div id="termos">
       <main class="texto">
@@ -93,6 +77,45 @@
    </div>
 
    <script src="../js/index.js"></script>
+   <script>
+      function addHTML() {
+         var el, i, domEl, fileName, xmlHttp;
+         
+         /*Iterate all DOM*/
+         el = document.getElementsByTagName("*");
+         for (i = 0; i < el.length; i++) {
+            domEl = el[i];
+            
+            /*find the element having w3-include-html attribute*/
+            fileName = domEl.getAttribute("w3-include-html");
+            if (fileName) {
+               
+               /*http request with attribute value as file name*/
+               xmlHttp = new XMLHttpRequest();
+               xmlHttp.onreadystatechange = function() {
+                  if (this.readyState == 4) {
+                     if (this.status == 200) {
+                        domEl.innerHTML = this.responseText;
+                     }
+                     if (this.status == 404) {
+                        domEl.innerHTML = "Page not found.";
+                     }
+                     
+                     /* Remove the attribute and invoke the function again*/
+                     domEl.removeAttribute("w3-include-html");
+                     addHTML();
+                  }
+               }
+               xmlHttp.open("GET", fileName, true);
+               xmlHttp.send();
+               
+               /*function ends*/
+               return;
+            }
+         }
+      }
+      addHTML();
+   </script>
 </body>
 
 </html>
