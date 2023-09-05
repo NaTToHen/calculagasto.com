@@ -32,7 +32,7 @@ header {
    justify-content: space-between;
    padding: 0 10% 0 10%;
    align-items: center;
-   height: 10vh;
+   height: 90px;
    width: 100%;
    transition: all ease-in-out .2s;
    background: var(--linear-padro, linear-gradient(107deg, #44FF4B 0%, #008205 92.04%));
@@ -189,3 +189,34 @@ footer .links li a {
 }
 
 /*--------------------------- SUPORTE --------------------------*/
+
+#termos {
+   margin-bottom: 80px;
+}
+
+.boxConteudo {
+   width: 60%;
+   margin: auto;
+}
+
+.label {
+   background: #31DB37;
+   color: white !important;
+   padding: 10px;
+   font-size: 25px;
+}
+
+.conteudo {
+   display: none;
+   padding: 10px 10px 120px 10px;
+   color: #808080;
+   background: #ececec;
+}
+
+.conteudo p {
+   font-size: 18px
+}
+
+.conteudo.active {
+   display: block;
+}
