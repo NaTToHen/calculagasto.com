@@ -6,5 +6,6 @@ accordionItems.forEach((item) => {
 
     label.addEventListener('click', () => {
         conteudo.classList.toggle('active');
+        label.classList.toggle('active')
     });
 });
