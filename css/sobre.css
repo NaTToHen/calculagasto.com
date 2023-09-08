@@ -73,6 +73,10 @@ header img:hover {
    color: white;
 }
 
+.mobile {
+   display: none;
+}
+
 .getApp {
    font-weight: 900;
    list-style: none;
@@ -244,4 +248,81 @@ footer .links li a {
    height: auto;
    margin-top: -5px;
    padding: 15px 10px 120px 10px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+   .boxConteudo {
+      width: 90%;
+   }
+
+   .texto {
+      width: 90%;
+   }
+
+   header {
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      z-index: 100;
+   }
+
+   .nav {
+      transition: all ease-in-out .2s;
+      display: none;
+   }
+
+   .logoMenu {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+   }
+
+   .navLista {
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      position: absolute;
+      top: 90px;
+      padding: 10px;
+      left: 0;
+      width: 100%;
+      background: #008205;
+   }
+
+   .linkNav {
+      margin: 0;
+   }
+
+   header .logo {
+      margin: 0;
+   }
+
+   .mobile {
+      background: none;
+      display: block;
+      border: none;
+      transition: all ease-in-out .2s;
+   }
+   
+   .mobile img {
+      width: 50px;
+      transition: all ease-in-out .2s;
+   }
+
+   .nav.ativo  {
+      display: block;
+      transition: all ease-in-out .2s;
+   }
+
+   .label {
+      font-size: 20px;
+   }
+
+   footer {
+      display: none;
+   }
 }

@@ -9,3 +9,10 @@ accordionItems.forEach((item) => {
         label.classList.toggle('active')
     });
 });
+
+const nav = document.querySelector('.nav');
+const menuMobile = document.querySelector('.mobile')
+
+menuMobile.addEventListener('click', () => {
+    nav.classList.toggle('ativo')
+})

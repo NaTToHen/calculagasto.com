@@ -11,7 +11,29 @@
 
 <body>
 
-   <div w3-include-html="../html/header.html"></div>
+   <div id="topoHeader">
+   <header id="menu">
+      <div class="logoMenu">
+         <div class="logo">
+            <a href="../index.html"><img src="../img/logo.svg" alt=""></a>
+         </div>
+         <button class="mobile"><img src="../img/mobile.svg"></button>
+      </div>
+      <nav class="nav">
+         <ul class="navLista">
+            <li class="linkNav home"><a href="../index.html">Home</a></li>
+            <li class="linkNav sobre"><a>Sobre</a>
+               <ul class="dropDown">
+                  <li class="dropLink"><a href="../html/sobre.html">Termos de Uso</a></li>
+                  <li class="dropLink"><a href="../html/duvidas.html">Dúvidas Frequentes</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="getApp">Download</a></li>
+         </ul>
+      </nav>
+   </header>
+   <script src="../js/duvidas.js"></script>
+</div>
 
    <div id="termos">
       <main class="texto">
@@ -76,7 +98,7 @@
             </footer>
    </div>
 
-   <script src="../js/index.js"></script>
+   <script src="../js/duvidas.js"></script>
    <script>
       function addHTML() {
          var el, i, domEl, fileName, xmlHttp;

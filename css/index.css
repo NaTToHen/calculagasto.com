@@ -82,6 +82,16 @@ header img:hover {
    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
+.mobile {
+   background: none;
+   display: none;
+   border: none;
+}
+
+.mobile img {
+   width: 50px;
+}
+
 .dropDown {
    transition: all ease-in-out .2s;
    display: none;
@@ -98,6 +108,7 @@ header img:hover {
 
 .sobre:hover {
    background: #008604;
+   cursor: pointer;
    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
 
    .dropDown {
@@ -254,7 +265,7 @@ header img:hover {
    margin-left: 20px;
    width: 200px;
    color: #717171;
-   font-size: 30px;
+   font-size: clamp(1em, 1em + 1vw, 1.5em);;
 }
 
 /*DEV*/
@@ -271,7 +282,7 @@ header img:hover {
 #dev h1 {
    color: #31DB37;
    text-align: center;
-   font-size: 64px;
+   font-size: clamp(2.5em, 2.5em + 1vw, 3.5em);
    font-style: normal;
    font-weight: 700;
    line-height: normal;
@@ -355,8 +366,196 @@ footer .links li a {
 ::-webkit-scrollbar-thumb {
    background: #00A106;
    cursor: pointer;
+   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
    background: #31DB37;
+   border-radius: 5px;
+}
+
+/*-------------------------- RESPONSIVIDADE ------------------------*/
+
+@media screen and (max-width: 600px) {
+   body {
+      margin: 0;
+   }
+
+   main {
+      width: 100%;
+   }
+
+   #topoHeader {
+      height: 70vh;
+   }
+
+   header {
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+   }
+
+   .nav {
+      display: none;
+      transition: all ease-in-out .2s;
+   }
+
+   .logoMenu {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+   }
+
+   .navLista {
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      position: absolute;
+      top: 90px;
+      padding: 10px;
+      left: 0;
+      width: 100%;
+      background: #008205;
+   }
+
+   .linkNav {
+      margin: 0;
+   }
+
+   header .logo {
+      margin: 0;
+   }
+
+   .fundoHeader {
+      height: 90px;
+   }
+
+   .fundoBaixo {
+      display: none;
+   }
+
+   #topo .direita {
+      display: none;
+   }
+
+   .celularesTopo {
+      display: none;
+   }
+
+   #topo .esquerda {
+      margin: auto;
+      width: 100%;
+      padding: 5%;
+   }
+
+   #topo {
+      width: 100%;
+      height: 50vh;
+      align-items: center;
+   }
+
+   .mobile {
+      background: none;
+      display: block;
+      border: none;
+      transition: all ease-in-out .2s;
+   }
+   
+   .mobile img {
+      width: 50px;
+      transition: all ease-in-out .2s;
+   }
+
+   .nav.ativo  {
+      display: block;
+      transition: all ease-in-out .2s;
+   }
+
+   .h1Topo {
+      width: 100%;
+      margin-left: 0px;
+      margin-top: 20vh;
+      font-size: clamp(2em, 2em + 1vw, 2.5em);
+   }
+
+   .btnGetApp {
+      margin-left: 0px;
+   }
+
+   #funcionalidades {
+      width: 100%;
+      flex-direction: column-reverse;
+      height: 65vh;
+   }
+
+   #funcionalidades .esquerda {
+      width: 100%;
+   }
+
+   #funcionalidades .direita {
+      width: 100%;
+   }
+
+   #funcionalidades .h1Func {
+      margin-top: 0px;
+      width: 100%;
+      font-size: clamp(1.7em, 1.7em + 1vw, 2.3em);
+      margin: auto;
+      margin-bottom: 40vh;
+   }
+
+   #funcionalidades .esquerda .celularFunc {
+      width: 60%;
+      margin-left: 20%;
+   }
+
+   #icones {
+      flex-direction: column;
+      width: 100%;
+   }
+
+   #icones .elemento img {
+      width: 25%;
+   }
+
+   #icones .elemento h1 {
+      font-size: clamp(1.5em, 1.5em + 1vw, 1.9em);
+   }
+
+   #dev {
+      width: 90%;
+      height: 24vh;
+   }
+
+   #dev h1 {
+      font-size: clamp(1.3em, 1.3em + 1vw, 2.2em);
+   }
+
+   #dev h2 {
+      font-size: clamp(1.2em, 1.2em + 1vw, 2em);
+   }
+
+   #dev .icones a img {
+      width: clamp(2em, 2em + 1vw, 4em);
+   }
+
+   #dev .icones img:first-child {
+      margin: 0;
+   }
+
+   #dev .icones {
+      margin: 20px auto;
+      gap: 30px;
+   }
+
+   .mobile {
+      background: none;
+      border: none;
+   }
+
+   footer {
+      display: none;
+   }
 }
